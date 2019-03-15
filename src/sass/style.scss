@@ -1,0 +1,235 @@
+@import "_minix.scss";
+@import "common.scss";
+* {
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    @include sizing;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+.box {
+    width: 100%;
+    height: 100%; // background: pink;
+    @include box-flex;
+    @include direction(column);
+    header {
+        width: 100%;
+        height: pxTorem(150px);
+        background: #ffe144;
+        @include box-flex;
+        @include direction(column);
+        div:nth-child(1) {
+            width: 100%;
+            height: pxTorem(40px); //  background: pink;
+            @include box-flex;
+            p:nth-child(1) {
+                margin-left: pxTorem(15px);
+                margin-top: pxTorem(10px);
+                color: black;
+                font-size: pxTorem(15px);
+            }
+            p:nth-child(2) {
+                border: pxTorem(1px) solid black;
+                color: black;
+                margin-left: pxTorem(95px);
+                margin-top: pxTorem(5px);
+                font-size: pxTorem(17px);
+                width: pxTorem(55px);
+                height: pxTorem(25px);
+                text-align: center;
+                border-radius: pxTorem(15px);
+            }
+            p:nth-child(3) {
+                border: pxTorem(1px) solid black;
+                color: black;
+                margin-left: pxTorem(10px);
+                margin-top: pxTorem(5px);
+                font-size: pxTorem(17px);
+                width: pxTorem(100px);
+                text-align: center;
+                height: pxTorem(25px);
+                border-radius: pxTorem(15px);
+            }
+        }
+        div:nth-child(2) {
+            width: 100%;
+            height: pxTorem(70px); //  background: blue;
+            p {
+                color: black;
+                margin-left: pxTorem(15px);
+                margin-top: pxTorem(10px);
+                font-size: pxTorem(30px);
+            }
+        }
+        div:nth-child(3) {
+            width: 100%;
+            height: pxTorem(40px); //  background: yellow;
+            @include box-flex;
+            p:nth-child(1) {
+                margin-left: pxTorem(15px);
+                margin-top: pxTorem(10px);
+                color: black;
+                font-size: pxTorem(15px);
+            }
+            p:nth-child(2) {
+                color: black;
+                margin-left: pxTorem(8px);
+                margin-top: pxTorem(10px);
+                font-size: pxTorem(17px);
+                font-weight: bold;
+            }
+            p:nth-child(3) {
+                color: black;
+                font-size: pxTorem(15px);
+                margin-left: pxTorem(65px);
+                margin-top: pxTorem(10px);
+            }
+            img {
+                margin-left: pxTorem(8px);
+                width: pxTorem(20px);
+                margin-top: pxTorem(10px);
+            }
+        }
+    }
+    section {
+        @include flex;
+        overflow: auto;
+        border-bottom: pxTorem(1px) solid #ccc;
+        div:nth-child(1) {
+            width: 100%;
+            height: pxTorem(50px); // background: pink;
+            @include box-flex;
+            @include justify(space-between);
+            padding: pxTorem(15px);
+            img {
+                width: pxTorem(25px);
+            }
+            span {
+                width: pxTorem(140px);
+                height: pxTorem(25px);
+                @include box-flex;
+                border: pxTorem(1px) solid #ccc;
+                border-radius: pxTorem(15px);
+                p:nth-child(1) {
+                    color: black;
+                    width: pxTorem(69px);
+                    background: #ffe144;
+                    font-size: pxTorem(17px);
+                    text-align: center;
+                    border-top-left-radius: pxTorem(15px);
+                    border-bottom-left-radius: pxTorem(15px);
+                }
+                p:nth-child(2) {
+                    width: pxTorem(69px);
+                    color: #ccc;
+                    font-size: pxTorem(17px);
+                    text-align: center;
+                }
+            }
+        }
+        div:nth-child(2) {
+            width: 100%;
+            height: pxTorem(50px); // background: orange;
+            @include box-flex;
+            @include justify(space-between);
+            padding: pxTorem(15px);
+            p:nth-child(1) {
+                color: #c0c0c0;
+                font-size: pxTorem(15px);
+            }
+            p:nth-child(2) {
+                color: #c0c0c0;
+                font-size: pxTorem(15px);
+            }
+        }
+        div:nth-child(3) {
+            width: 100%;
+            height: pxTorem(330px); // background: blue;
+            @include box-flex;
+            @include direction(column);
+            dl {
+                width: 100%;
+                height: pxTorem(81.75px);
+                border-bottom: pxTorem(1px) solid #ccc;
+                @include box-flex;
+                @include justify(space-between);
+                padding: pxTorem(15px);
+                dt {
+                    width: pxTorem(54px);
+                    height: pxTorem(54px);
+                    background: #ffe144;
+                    border-radius: pxTorem(50px);
+                    img {
+                        width: pxTorem(35px);
+                        margin-left: pxTorem(10px);
+                        margin-top: pxTorem(10px);
+                    }
+                }
+                p:nth-child(2) {
+                    color: black;
+                    margin-left: pxTorem(-170px);
+                    margin-top: pxTorem(10px);
+                    font-size: pxTorem(20px);
+                }
+                p:nth-child(3) {
+                    color: #ff8a8b;
+                    font-size: pxTorem(20px);
+                }
+            }
+        }
+        div:nth-child(4) {
+            width: 100%;
+            height: pxTorem(11px);
+            background: #f9f9f7;
+        }
+        div:nth-child(5) {
+            width: 100%;
+            height: pxTorem(50px); // background: orange;
+            @include box-flex;
+            @include justify(space-between);
+            padding: pxTorem(15px);
+            p:nth-child(1) {
+                color: #c0c0c0;
+                font-size: pxTorem(15px);
+            }
+            p:nth-child(2) {
+                color: #c0c0c0;
+                font-size: pxTorem(15px);
+            }
+        }
+    }
+    footer {
+        width: 100%;
+        height: pxTorem(72px); //  background: blue;
+        @include box-flex;
+        @include align;
+        @include justify(space-around);
+        dl {
+            width: pxTorem(47px);
+            height: pxTorem(57px);
+            dt {
+                width: pxTorem(47px);
+                height: pxTorem(35px);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            dd {
+                color: black;
+                margin-left: pxTorem(6px);
+                font-size: pxTorem(14px);
+                .ing {
+                    color: red;
+                }
+            }
+        }
+    }
+}
